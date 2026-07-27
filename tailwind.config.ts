@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import colors from 'tailwindcss/colors';
 
 export default {
   content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}'],
@@ -13,7 +14,7 @@ export default {
           900: '#152448',
         },
         ink: '#0f172a',
-        slate: '#475569',
+        slate: colors.slate,
       },
       boxShadow: {
         soft: '0 10px 30px rgba(15, 23, 42, 0.08)',
