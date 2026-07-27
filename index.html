@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Papeterie Ltd</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --brand-700: #213b8b;
+        --brand-900: #152448;
+        --slate-600: #475569;
+        --bg: #f8fafc;
+        --white: #ffffff;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: #0f172a;
+      }
+      header, footer {
+        background: var(--white);
+        border-bottom: 1px solid #e2e8f0;
+      }
+      footer {
+        border-top: 1px solid #e2e8f0;
+        border-bottom: none;
+        background: #0f172a;
+        color: #cbd5e1;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px 24px;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav a {
+        color: var(--brand-900);
+        text-decoration: none;
+        margin-left: 16px;
+        font-weight: 600;
+      }
+      .hero {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 0;
+      }
+      .badge {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: #eef2ff;
+        color: var(--brand-700);
+        font-size: 14px;
+        margin-bottom: 18px;
+      }
+      h1 {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        line-height: 1.1;
+        color: var(--brand-900);
+        margin: 0 0 16px;
+      }
+      p {
+        font-size: 1.05rem;
+        color: var(--slate-600);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .button {
+        display: inline-block;
+        margin-top: 24px;
+        padding: 12px 20px;
+        background: var(--brand-700);
+        color: white;
+        text-decoration: none;
+        border-radius: 999px;
+        font-weight: 600;
+      }
+      @media (max-width: 640px) {
+        .nav { flex-direction: column; gap: 12px; }
+        .nav a { margin: 0 8px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <strong>Hero Papeterie Ltd</strong>
+        <div>
+          <a href="#">Home</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="container">
+        <div class="badge">Frontend foundation in progress</div>
+        <h1>Hero Papeterie Ltd Website - Under Development.</h1>
+        <p>This preview shows the initial responsive layout foundation for the official Hero Papeterie Ltd website.</p>
+        <a class="button" href="#">Get in touch</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>Hero Papeterie Ltd • Office stationery, printing, branding, and ICT solutions</p>
+      </div>
+    </footer>
+  </body>
+</html>
