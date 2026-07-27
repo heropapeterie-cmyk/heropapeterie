@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { LocationMap } from '@/components/location-map';
+// Use a lightweight thumbnail in the footer to avoid duplicate interactive maps
+import { NewsletterForm } from '@/components/newsletter-form';
 
 const socialLinks = [
   { href: 'https://www.facebook.com', label: 'Facebook' },
@@ -39,30 +40,23 @@ export function Footer() {
           <div id="newsletter">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">Newsletter</p>
             <p className="mt-3 text-sm leading-7 text-slate-400">Receive updates on products, services, and offers from Hero Papeterie Ltd.</p>
-            <form className="mt-4 flex flex-col gap-3 sm:flex-row">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="w-full rounded-full border border-slate-700 bg-slate-900 px-4 py-2.5 text-sm text-white outline-none ring-0 placeholder:text-slate-500"
-              />
-              <button type="submit" className="rounded-full bg-[#D4AF37] px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-[#e0bb4d]">
-                Subscribe
-              </button>
-            </form>
+            <NewsletterForm />
           </div>
         </div>
 
-        <div className="mt-8 rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-4">
-          <div className="grid gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">Visit us</p>
-              <p className="mt-2 text-sm leading-7 text-slate-400">We are conveniently located in Gikondo, serving clients across Kigali and Rwanda with efficient support.</p>
-            </div>
-            <div className="overflow-hidden rounded-[1.25rem] border border-slate-800">
-              <LocationMap />
+          <div className="mt-8 rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-4">
+            <div className="grid gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">Visit us</p>
+                <p className="mt-2 text-sm leading-7 text-slate-400">We are conveniently located in Gikondo, serving clients across Kigali and Rwanda with efficient support.</p>
+              </div>
+              <div className="overflow-hidden rounded-[1.25rem] border border-slate-800">
+                <a href="#location" className="flex h-40 items-center justify-center bg-gradient-to-br from-slate-800 to-slate-700 px-4 text-sm text-slate-300">
+                  View map & directions
+                </a>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </footer>
   );
