@@ -4,56 +4,52 @@ const trustIndicators = ['Professional Service', 'Quality Products', 'Fast Deliv
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(212,175,55,0.12),_transparent_35%),linear-gradient(135deg,_#f8fafc_0%,_#f3f6fb_100%)]">
-      <div className="absolute left-[-5rem] top-[-4rem] h-56 w-56 rounded-full bg-[#0F4C81]/10 blur-3xl" aria-hidden="true" />
-      <div className="absolute bottom-[-3rem] right-[-2rem] h-64 w-64 rounded-full bg-[#D4AF37]/20 blur-3xl" aria-hidden="true" />
+    <section className="relative overflow-hidden bg-[#050816] text-white">
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80"
+      >
+        <source src="https://cdn.coverr.co/videos/coverr-printing-press-1560866326154/1080p.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-[#050816]/80" aria-hidden="true" />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
-          <div className="animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#0F4C81]/15 bg-white/90 px-4 py-2 text-sm font-semibold text-[#0F4C81] shadow-sm backdrop-blur">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
-              Trusted Business Solutions in Rwanda
-            </div>
+      <div className="relative mx-auto flex min-h-[78vh] max-w-7xl items-center px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <div className="max-w-2xl animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-2 text-sm font-semibold text-amber-100 backdrop-blur">
+            <span className="h-2.5 w-2.5 rounded-full bg-amber-400" aria-hidden="true" />
+            Trusted Business Solutions in Rwanda
+          </div>
 
-            <h1
-              id="hero-heading"
-              className="mt-6 max-w-3xl text-4xl font-black leading-[1.05] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
-            >
-              Everything Your Office, School &amp; Business Needs — All in One Place.
-            </h1>
+          <h1 id="hero-heading" className="mt-6 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            Premium stationery, print, and business essentials for every workplace.
+          </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              Hero Papeterie Ltd provides quality stationery, printing, branding, ICT solutions, and office supplies for businesses,
-              schools, institutions, and individuals across Rwanda.
-            </p>
+          <p className="mt-6 text-lg leading-8 text-slate-200">
+            Hero Papeterie Ltd supports offices, schools, and institutions with dependable supplies, professional printing, and tailored service.
+          </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Link
-                href="#newsletter"
-                className="inline-flex items-center justify-center rounded-full bg-[#0F4C81] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#0F4C81]/20 transition hover:-translate-y-0.5 hover:bg-[#0b3d6d] focus:outline-none focus:ring-2 focus:ring-[#0F4C81] focus:ring-offset-2"
-              >
-                Subscribe to our Newsletter
-              </Link>
-              <Link
-                href="#services"
-                className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-[#0F4C81]/30 hover:text-[#0F4C81] focus:outline-none focus:ring-2 focus:ring-[#0F4C81] focus:ring-offset-2"
-              >
-                Explore Services
-              </Link>
-            </div>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Link href="#newsletter" className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-400">
+              Subscribe to our Newsletter
+            </Link>
+            <Link href="#services" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20">
+              Explore Services
+            </Link>
+          </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              {trustIndicators.map((indicator) => (
-                <div key={indicator} className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-2 text-sm font-medium text-slate-700 shadow-sm">
-                  <svg viewBox="0 0 20 20" className="h-4 w-4 text-[#D4AF37]" fill="currentColor" aria-hidden="true">
-                    <path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.2 7.2a1 1 0 0 1-1.4 0l-3.2-3.2a1 1 0 1 1 1.4-1.4l2.5 2.5 6.5-6.5a1 1 0 0 1 1.4 0Z" />
-                  </svg>
-                  {indicator}
-                </div>
-              ))}
-            </div>
-
+          <div className="mt-8 flex flex-wrap gap-3">
+            {trustIndicators.map((indicator) => (
+              <div key={indicator} className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-sm font-medium text-slate-100 backdrop-blur">
+                <svg viewBox="0 0 20 20" className="h-4 w-4 text-amber-400" fill="currentColor" aria-hidden="true">
+                  <path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.2 7.2a1 1 0 0 1-1.4 0l-3.2-3.2a1 1 0 1 1 1.4-1.4l2.5 2.5 6.5-6.5a1 1 0 0 1 1.4 0Z" />
+                </svg>
+                {indicator}
+              </div>
+            ))}
           </div>
         </div>
       </div>

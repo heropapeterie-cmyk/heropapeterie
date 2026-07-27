@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  @apply min-h-screen bg-slate-50 text-slate-800 antialiased transition-colors duration-300;
+  @apply min-h-screen bg-[#f5f3ee] text-slate-800 antialiased transition-colors duration-300;
 }
 
 a {
@@ -20,6 +20,10 @@ a {
 
 body.dark {
   @apply bg-[#07131f] text-slate-200;
+}
+
+body.dark .bg-slate-950 {
+  @apply bg-[#07131f];
 }
 
 body.dark .bg-white,
