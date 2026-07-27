@@ -1,7 +1,4 @@
 import { Hero } from '@/components/hero';
-import { Navbar } from '@/components/layout/navbar';
-import { Footer } from '@/components/layout/footer';
-import { BackToTopButton } from '@/components/back-to-top';
 import { LocationMap } from '@/components/location-map';
 import dynamic from 'next/dynamic';
 
@@ -11,30 +8,14 @@ const Gallery = dynamic(() => import('@/components/gallery'), { ssr: false });
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <Navbar />
-
       <main>
         <Hero />
 
-        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-semibold">Why choose Hero Papeterie?</h2>
-            <p className="mt-4 text-lg text-slate-600">Comprehensive supply, trusted service, and tailored solutions for every workspace.</p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <div className="rounded-xl border border-slate-200 p-6">
-              <h3 className="font-semibold">Fast Delivery</h3>
-              <p className="mt-2 text-sm text-slate-600">We move quickly across Kigali and Rwanda to keep your operations running.</p>
-            </div>
-            <div className="rounded-xl border border-slate-200 p-6">
-              <h3 className="font-semibold">Quality Products</h3>
-              <p className="mt-2 text-sm text-slate-600">Curated ranges and reliable brands for offices, schools and institutions.</p>
-            </div>
-            <div className="rounded-xl border border-slate-200 p-6">
-              <h3 className="font-semibold">Local Expertise</h3>
-              <p className="mt-2 text-sm text-slate-600">Deep local knowledge and long-term partnerships with Rwandan organisations.</p>
-            </div>
+        <section id="services" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 text-center sm:p-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#0F4C81]">What we offer</p>
+            <h2 className="mt-3 text-2xl font-semibold text-slate-900">Practical supplies and support for offices, schools, and growing teams.</h2>
+            <p className="mt-4 text-lg text-slate-600">From stationery and printing to branding and ICT essentials, Hero Papeterie keeps everyday operations simple and dependable.</p>
           </div>
         </section>
 
@@ -75,24 +56,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8" aria-label="Testimonials">
-          <h2 className="text-2xl font-semibold text-center">Customer stories</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            <blockquote className="rounded-lg border border-slate-200 p-6">
-              <p className="text-sm text-slate-600">“Great service and fast delivery — they helped outfit our new school.”</p>
-              <footer className="mt-3 text-xs font-medium text-slate-500">— Paul, School Administrator</footer>
-            </blockquote>
-            <blockquote className="rounded-lg border border-slate-200 p-6">
-              <p className="text-sm text-slate-600">“Reliable print quality and competitive pricing for our business cards.”</p>
-              <footer className="mt-3 text-xs font-medium text-slate-500">— Alice, Marketing Manager</footer>
-            </blockquote>
-            <blockquote className="rounded-lg border border-slate-200 p-6">
-              <p className="text-sm text-slate-600">“Excellent local support and great product selection.”</p>
-              <footer className="mt-3 text-xs font-medium text-slate-500">— John, Procurement</footer>
-            </blockquote>
-          </div>
-        </section>
-
         <section id="faq" className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold text-center">Frequently asked questions</h2>
           <div className="mt-8 space-y-4">
@@ -111,7 +74,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="location" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <section id="contact" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="text-2xl font-semibold">Visit our store</h2>
@@ -126,9 +89,6 @@ export default function HomePage() {
         </section>
       </main>
 
-      <Footer />
-
-      <BackToTopButton />
     </div>
   );
 }

@@ -44,19 +44,6 @@ export function Footer() {
           </div>
         </div>
 
-          <div className="mt-8 rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-4">
-            <div className="grid gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">Visit us</p>
-                <p className="mt-2 text-sm leading-7 text-slate-400">We are conveniently located in Gikondo, serving clients across Kigali and Rwanda with efficient support.</p>
-              </div>
-              <div className="overflow-hidden rounded-[1.25rem] border border-slate-800">
-                <a href="#location" className="flex h-40 items-center justify-center bg-gradient-to-br from-slate-800 to-slate-700 px-4 text-sm text-slate-300">
-                  View map & directions
-                </a>
-              </div>
-            </div>
-          </div>
       </div>
     </footer>
   );

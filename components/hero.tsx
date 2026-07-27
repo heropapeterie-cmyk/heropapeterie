@@ -2,14 +2,6 @@ import Link from 'next/link';
 
 const trustIndicators = ['Professional Service', 'Quality Products', 'Fast Delivery'];
 
-// services moved to page-level to avoid repetition
-
-const businessDetails = [
-  'Rwandan business headquartered in Kigali, Rwanda',
-  'Serving businesses, schools, institutions, and individuals',
-  'Focused on dependable quality, responsive service, and long-term partnerships',
-];
-
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(212,175,55,0.12),_transparent_35%),linear-gradient(135deg,_#f8fafc_0%,_#f3f6fb_100%)]">
@@ -62,31 +54,9 @@ export function Hero() {
               ))}
             </div>
 
-            <div className="mt-8 grid gap-4 rounded-[1.75rem] border border-slate-200/80 bg-white/80 p-5 shadow-sm backdrop-blur md:grid-cols-[1.1fr_0.9fr]">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#0F4C81]">Company Profile</p>
-                <h2 className="mt-2 text-xl font-semibold text-slate-900">Hero Papeterie Ltd</h2>
-                <p className="mt-2 text-sm leading-7 text-slate-600">
-                  Located at KK 4 Avenue, Gikondo Sector, Kicukiro District, Kigali City, Rwanda, we provide integrated business solutions
-                  designed to support growth and daily operations.
-                </p>
-              </div>
-              <ul className="space-y-2 text-sm text-slate-600">
-                {businessDetails.map((detail) => (
-                  <li key={detail} className="flex items-start gap-2">
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
-                    <span>{detail}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
-
-          {/* right-hand product/details column removed to avoid duplication with page-level sections */}
         </div>
       </div>
-
-      {/* Hero is intentionally concise; page-level sections provide full details (services, contact, map) */}
     </section>
   );
 }
